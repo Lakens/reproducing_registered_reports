@@ -1,0 +1,53 @@
+---
+title: "Codebook"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    code_folding: 'hide'
+    self_contained: true
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: xelatex
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  warning = TRUE, # show warnings during codebook generation
+  message = TRUE, # show messages during codebook generation
+  error = TRUE, # do not interrupt codebook generation in case of errors,
+                # usually better for debugging
+  echo = TRUE  # show R code
+)
+ggplot2::theme_set(ggplot2::theme_bw())
+pander::panderOptions("table.split.table", Inf)
+```
+
+```{r prepare_codebook}
+library(codebook)
+library(readxl)
+library(here)
+library(rio)
+
+codebook_data <- read_excel("Data_for_Analysis_of_Open_Data_and_Computational_Reproducibility_in_Registered_Reports_in_Psychology.xlsx", n_max = 62)
+#Read codebook from second sheet in excel file.
+dict <- read_excel("Data_for_Analysis_of_Open_Data_and_Computational_Reproducibility_in_Registered_Reports_in_Psychology.xlsx", sheet = "Codebook")
+
+#Add variable labels to data
+var_label(codebook_data) <- dict_to_list(dict)
+
+#Add meta data
+metadata(codebook_data)$name <- "Reproducibility of Registered Reports in psychology"
+metadata(codebook_data)$description <- "Coded variables to examine data and code sharing and the computational reproducibility for Registered Reports in psychology"
+metadata(codebook_data)$creator <- "Pepijn Obels, Daniel Lakens, Nicholas A. Coles, Jaroslav Gottfried"
+metadata(codebook_data)$temporalCoverage <- "Spring 2018"
+
+#Export codebook
+rio::export(codebook_data, "reproducing_registered_reports_codebook.rds") # to R data structure file
+```
+
+```{r codebook}
+codebook(codebook_data)
+```
