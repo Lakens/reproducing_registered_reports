@@ -25,7 +25,7 @@ affiliation:
   - id            : "3"
     institution   : "Masaryk University, Brno, Czech Republic"
   - id            : "4"
-    institution   : "Code Ocean"
+    institution   : "Code Ocean, New York, USA"
 
 author_note: |
   This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013. All code used to create this manuscript is provided in an OSF repository at https://osf.io/suqz3/.
