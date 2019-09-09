@@ -15,7 +15,7 @@ author:
   - name          : "Jaroslav Gottfried"
     affiliation   : "3"
   - name          : "Seth Ariel Green"
-    affiliation   : "Code Ocean"
+    affiliation   : "4"
 
 affiliation:
   - id            : "1"
@@ -24,6 +24,8 @@ affiliation:
     institution   : "University of Tennessee, Knoxville, USA"
   - id            : "3"
     institution   : "Masaryk University, Brno, Czech Republic"
+  - id            : "4"
+    institution   : "Code Ocean"
 
 author_note: |
   This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013. All code used to create this manuscript is provided in an OSF repository at https://osf.io/suqz3/.
