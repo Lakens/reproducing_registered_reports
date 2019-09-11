@@ -91,7 +91,7 @@
 \setlength{\longtablewidth}{1in}
 \newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
-\authornote{This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013. All code used to create this manuscript is provided in an OSF repository at \url{https://osf.io/suqz3/}.
+\authornote{This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013.
 
 Correspondence concerning this article should be addressed to Daniel Lakens, ATLAS 9.402, 5600 MB, Eindhoven, The Netherlands. E-mail: \href{mailto:D.Lakens@tue.nl}{\nolinkurl{D.Lakens@tue.nl}}}
 
@@ -122,6 +122,11 @@ The novelty of Registered Reports may attract early adopters who are also explor
 \subsubsection{The Current Research}\label{the-current-research}}
 
 Our main objective was to examine how reusable data and code underlying Registered Reports are, based solely on the information provided in those articles. We examined how many authors voluntarily shared data and code, and the extent to which we could reproduce reported analyses without contacting the original authors. While reproducing the results reported in Registered Reports, we kept track of factors that facilitated reproducibility or that made reproducing results more difficult. We report these qualitative findings with an aim to highlight how current practices can be improved.
+
+\hypertarget{data}{%
+\subsubsection{Data}\label{data}}
+
+All data and the code used to create this manuscript is provided in an OSF repository at \url{https://osf.io/suqz3/}.
 
 \hypertarget{method}{%
 \subsubsection{Method}\label{method}}
@@ -189,6 +194,11 @@ Another useful technology is RMarkdown, which enable researchers to write fully 
 Finally, journals that value reproducibility might find it worthwhile to check whether the data and analysis code shared with a submission can be used to reproduce the results. The average time it took our team to check that the analysis code could reproduce the results reported in the paper was 24 minutes. This is slightly shorter than the time it took Hardwicke and colleagues (2018), who estimated (without keeping track of the time explicitly) that reproducibility reports took between 2 and 25 person-hours, depending on whether the paper eventually fell in the reproducible or not-reproducible category, and whether author assistance was needed. One major difference between our approaches is that we did not write \enquote{reproducibility reports} for each article. Documenting the process of reproducing a paper adds transparency and allows others to check the the decisions about every value in an article. Whether such a level of detail is worth the additional time investment of documenting each reported value is a cost-benefit analysis that journals should make for themselves. The required time might be reduced by explicitly asking authors to submit files in a format or structure that facilitates such checks, or automating part of the work that is needed to check the reproducibility of results. Overall, we feel that the time required for a basic check of the reproducibility of manuscripts (i.e., where one checks whether the \emph{main} results in the paper are reproduced by the analysis scripts, but without documenting this step at the level of each individual number) is a surmountable hurdle for journals, and would substantially improve the computational reproducibility of the published literature.
 
 In addition to novel technologies, most progress can probably be made by developing standards within research communities, and educating researchers about best practices that guarantee reproducibility. Most researchers are not trained in reproducible data analysis, and cannot be expected to invent best practices from scratch. As good examples appear in the published literature over time, and best practices within subdisciplines crystalize, standards should emerge that improve reproducibility, and that allow researchers to share data and code in such a way that others with basic scientific training can reproduce their results and reuse their data.
+
+\hypertarget{author-contributions}{%
+\section{Author Contributions}\label{author-contributions}}
+
+P. Obels and D. Lakens developed the idea. All authors contributed data by reproducing analyses. P. Obels drafted the initial version of the manuscript, D. Lakens wrote the final version, all authors revised the manuscript.
 
 \hypertarget{conflict-of-interest-statement}{%
 \section{Conflict of Interest Statement}\label{conflict-of-interest-statement}}

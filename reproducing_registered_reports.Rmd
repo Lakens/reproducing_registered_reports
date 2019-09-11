@@ -28,7 +28,7 @@ affiliation:
     institution   : "Code Ocean, New York, USA"
 
 author_note: |
-  This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013. All code used to create this manuscript is provided in an OSF repository at https://osf.io/suqz3/.
+  This work was supported by the Netherlands Organization for Scientific Research (NWO) VIDI grant 452-17-013. 
 
 abstract: |
   Ongoing technological developments have made it easier than ever before for scientists to share their data, materials, and analysis code. Sharing data and analysis code makes it easier for other researchers to re-use or check published research. These benefits will only emerge if researchers can reproduce the analysis reported in published articles, and if data is annotated well enough so that it is clear what all variables mean. Because most researchers have not been trained in computational reproducibility, it is important to evaluate current practices to identify practices that can be improved. We examined data and code sharing, as well as computational reproducibility of the main results, without contacting the original authors, for Registered Reports published in the psychological literature between 2014 and 2018. Of the 62 articles that met our inclusion criteria, data was available for 40 articles, and analysis scripts for 37 articles. For the 35 articles that shared both data and code and performed analyses in SPSS, R, Python, MATLAB, or JASP, we could run the scripts for 31 articles, and reproduce the main results for 20 articles. Although the articles that shared both data and code (35 out of 62, or 56%) and articles that could be computationally reproduced (20 out of 35, or 57%) was relatively high compared to other studies, there is clear room for improvement. We provide practical recommendations based on our observations, and link to examples of good research practices in the papers we reproduced.
@@ -100,6 +100,10 @@ The novelty of Registered Reports may attract early adopters who are also explor
 
 Our main objective was to examine how reusable data and code underlying Registered Reports are, based solely on the information provided in those articles. We examined how many authors voluntarily shared data and code, and the extent to which we could reproduce reported analyses without contacting the original authors. While reproducing the results reported in Registered Reports, we kept track of factors that facilitated reproducibility or that made reproducing results more difficult. We report these qualitative findings with an aim to highlight how current practices can be improved. 
 
+### Data
+
+All data and the code used to create this manuscript is provided in an OSF repository at https://osf.io/suqz3/.
+
 ### Method
 
 To find Registered Reports published in psychology, we drew from a database of registered reports maintained by the Center for Open Science.^[https://www.zotero.org/groups/479248/osf/items/collectionKey/KEJP68G9] At the start of this project (06-05-2018) this database consisted of 118 published Registered Reports. Eighty-one articles in this database were published in the psychological literature. We limited our analysis to studies performed by single groups, since such articles are most representative of the researchers currently work, and excluded 7 large scale collaborations where dedicated team members were responsible for making the analysis reproducible, such as Registered Replication Reports [@hagger_multilab_2016] and Many Labs projects [@klein_investigating_2014; @klein_many_2018]. Upon further inspection of the 72 papers left in the dataset, it turned out that 10 were not formally Registered Reports. This left `r length(all_data$doi)` studies in our sample. When evaluating whether we could reproduce the original results, we limited ourselves to statistical software packages that we had experience with (R, SPSS, Python, MATLAB, and JASP) and excluded studies that required expertise in software packages we are not trained in (e.g., dedicated EEG software), which led to the exclusion of one additional study.
@@ -163,7 +167,12 @@ Finally, journals that value reproducibility might find it worthwhile to check w
 
 In addition to novel technologies, most progress can probably be made by developing standards within research communities, and educating researchers about best practices that guarantee reproducibility. Most researchers are not trained in reproducible data analysis, and cannot be expected to invent best practices from scratch. As good examples appear in the published literature over time, and best practices within subdisciplines crystalize, standards should emerge that improve reproducibility, and that allow researchers to share data and code in such a way that others with basic scientific training can reproduce their results and reuse their data. 
 
+# Author Contributions
+
+P. Obels and D. Lakens developed the idea. All authors contributed data by reproducing analyses. P. Obels drafted the initial version of the manuscript, D. Lakens wrote the final version, all authors revised the manuscript.
+
 # Conflict of Interest Statement
+
 One author (SG) worked at Code Ocean during the writing of this manuscript. SG joined the project after its accompanying Code Ocean component was already submitted and published, and did not write any of the text concerning Code Ocean.
 
 # References
