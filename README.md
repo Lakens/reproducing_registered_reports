@@ -1,8 +1,8 @@
-# reproducing_registered_reports
-Reproducing Registered Reports in Psychology
+# Analysis of Open Data and Computational Reproducibility in Registered Reports in Psychology
 
+Now available as a [preprint on PsArXiv](https://psyarxiv.com/fk8vh/).
 
-### Instructions:
+### Reproducing our analysis:
 The RMarkdown file should be able to load the data file, which is: 
 
 `Data_for_Analysis_of_Open_Data_and_Computational_Reproducibility_in_Registered_Reports_in_Psychology.xlsx`
